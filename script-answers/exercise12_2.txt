@@ -1,0 +1,54 @@
+Script started on 2024-06-11 12:58:00+03:00 [TERM="xterm-256color" TTY="/dev/pts/5" COLUMNS="127" LINES="65"]
+[?2004h]0;a@a-VirtualBox: ~/Git/part12-containers-applications/script-answers[01;32ma@a-VirtualBox[00m:[01;34m~/Git/part12-containers-applications/script-answers[00m$ [7mdocker run -it ubuntu bash[27mdocker run -it ubuntu bash
+[?2004l
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+
+[1A[2K
+00d679a470c4: Pulling fs layer 
+[1B[1A[2K
+00d679a470c4: Downloading [>                                                  ]  294.2kB/28.87MB
+[1B[1A[2K
+00d679a470c4: Downloading [=================>                                 ]  10.07MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Downloading [======================================>            ]  22.49MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Verifying Checksum 
+[1B[1A[2K
+00d679a470c4: Download complete 
+[1B[1A[2K
+00d679a470c4: Extracting [>                                                  ]  294.9kB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [==========>                                        ]  5.898MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [================>                                  ]  9.437MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [==========================>                        ]  15.34MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [====================================>              ]  21.23MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [=========================================>         ]  24.18MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [==========================================>        ]  24.77MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [==============================================>    ]  27.13MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [=================================================> ]  28.61MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Extracting [==================================================>]  28.87MB/28.87MB
+[1B[1A[2K
+00d679a470c4: Pull complete 
+[1BDigest: sha256:e3f92abc0967a6c19d0dfa2d55838833e947b9d74edbcb0113e48535ad4be12a
+Status: Downloaded newer image for ubuntu:latest
+[?2004h]0;root@608a45b99dbe: /root@608a45b99dbe:/# mkdir [7m/usr/src/app[27m/usr/src/app
+[?2004l
+[?2004h]0;root@608a45b99dbe: /root@608a45b99dbe:/# touch [7m/usr/src/app/index.js[27m/usr/src/app/index.js
+[?2004l
+[?2004h]0;root@608a45b99dbe: /root@608a45b99dbe:/# [Kexit
+[?2004l
+exit
+[?2004h]0;a@a-VirtualBox: ~/Git/part12-containers-applications/script-answers[01;32ma@a-VirtualBox[00m:[01;34m~/Git/part12-containers-applications/script-answers[00m$ exit
+[?2004l
+exit
+
+Script done on 2024-06-11 12:58:52+03:00 [COMMAND_EXIT_CODE="0"]
