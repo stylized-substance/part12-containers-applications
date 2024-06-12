@@ -1,0 +1,72 @@
+Script started on 2024-06-12 09:49:35+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="255" LINES="65"]
+[?2004h]0;a@a-VirtualBox: ~/Git/part12-containers-applications/script-answers[01;32ma@a-VirtualBox[00m:[01;34m~/Git/part12-containers-applications/script-answers[00m$ git reset --hard[K/usr/bin/git -C "/home/a/Git/bloglist-monorepo" -c "core.editor=code --wait --reuse-window" branch --delete testing[10Pmerg[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit reset --hard[K/usr/bin/git -C "/home/a/Git/bloglist-monorepo" -c "core.editor=code --wait --reuse-window" branch --delete testing2[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit reset --hard HEAD[K/usr/bin/git -C "/home/a/Git/bloglist-monorepo" -c "core.editor=code --wait --reuse-window" branch --delete testing2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit reset --hard[K/usr/bin/git -C "/home/a/Git/bloglist-monorepo" -c "core.editor=code --wait --reuse-window" merge testing[10@branch --delet[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cgit reset[K --hard[Kdocker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND                  CREATED             STATUS             PORTS                                         NAMES
+6173e19254e0   nginx     "/docker-entrypoint.…"   12 minutes ago      Up 12 minutes      0.0.0.0:8080->80/tcp, :::8080->80/tcp         distracted_aryabhata
+3668b790e143   nginx     "/docker-entrypoint.…"   16 minutes ago      Up 16 minutes      80/tcp                                        quizzical_swartz
+4993dd00ddaf   mongo     "docker-entrypoint.s…"   About an hour ago   Up About an hour   0.0.0.0:3456->27017/tcp, :::3456->27017/tcp   todo-backend-mongo-1
+[?2004h]0;a@a-VirtualBox: ~/Git/part12-containers-applications/script-answers[01;32ma@a-VirtualBox[00m:[01;34m~/Git/part12-containers-applications/script-answers[00m$ docker exec -it 49 bash
+[?2004l[?2004hroot@4993dd00ddaf:/# mongosh -u root -p example
+[?2004l]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	6669452db351c0c22ca26a12
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.6[0m
+Using MongoDB:		7.0.11
+[1m[33mUsing Mongosh[0m:		2.2.6
+
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-06-12T05:39:01.087+00:00: vm.max_map_count is too low
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m        108.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   72.00 KiB
+[1G[0Jtest> [7Guse the_database
+switched to db the_database
+[1G[0Jthe_database> [15Gshw col[1G[0Jthe_database> shw co[21G[1G[0Jthe_database> shw c[20G[1G[0Jthe_database> shw [19G[1G[0Jthe_database> shw[18G[1G[0Jthe_database> sh[17Gow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'66693367184e4e9d45a26a13'[39m),
+    text: [32m'New todo'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66693367184e4e9d45a26a14'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.collect[1G[0Jthe_database> db.collec[24G[1G[0Jthe_database> db.colle[23G[1G[0Jthe_database> db.coll[22G[1G[0Jthe_database> db.col[21G[1G[0Jthe_database> db.co[20G[1G[0Jthe_database> db.c[19G[1G[0Jthe_database> db.[18Gtodos.insertOne({text[33mtext[39m: Increase the number o[36mof[39m tools i[36min[39m my tool belt[4D[5D[3D[3D[6D[3D[7D[4D[1D[1D[1D[1D[1D[1D[1D[1D[1D[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my tool belt[39m[42G[44C[32m'[39m, st[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my tool belt'[39m, s[90G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my tool belt'[39m, [89G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my tool belt'[39m,[88G d[36mdo[39mdone: fals[33mfalse[39m}([1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my tool belt'[39m, [33mdone[39m: [33mfalse[39m}[101G)
+{
+  acknowledged: [33mtrue[39m,
+  insertedId: ObjectId([32m'66694589b351c0c22ca26a13'[39m)
+}
+[1G[0Jthe_database> [15G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the number of tools in my tool belt'[39m, [33mdone[39m: [33mfalse[39m})[102G[1G[0Jthe_database> db.todos.find({})[32G
+[
+  {
+    _id: ObjectId([32m'66693367184e4e9d45a26a13'[39m),
+    text: [32m'New todo'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66693367184e4e9d45a26a14'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  },
+  {
+    _id: ObjectId([32m'66694589b351c0c22ca26a13'[39m),
+    text: [32m'Increase the number of tools in my tool belt'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gexit
+[?2004hroot@4993dd00ddaf:/# exit
+[?2004lexit
+[?2004h]0;a@a-VirtualBox: ~/Git/part12-containers-applications/script-answers[01;32ma@a-VirtualBox[00m:[01;34m~/Git/part12-containers-applications/script-answers[00m$ exit
+[?2004lexit
+
+Script done on 2024-06-12 09:52:25+03:00 [COMMAND_EXIT_CODE="0"]
