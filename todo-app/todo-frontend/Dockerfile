@@ -20,4 +20,4 @@ RUN npm run build
 
 FROM nginx:1.25-alpine AS serve-stage
 
-COPY --from=build-stage /usr/src/app/dist /usr/share/nginx/html
+COPY --from=build-stage . /usr/share/nginx/html
