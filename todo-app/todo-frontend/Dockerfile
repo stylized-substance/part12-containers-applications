@@ -10,7 +10,11 @@ RUN npm run test
 
 FROM test-stage AS build-stage
 
-ENV VITE_BACKEND_URL="http://localhost:3000"
+# Use localhost:3000 if you want to run outside docker
+#ENV VITE_BACKEND_URL="http://localhost:3000"
+
+# Use localhost:3000 if you want to run inside docker with reverse proxy
+ENV VITE_BACKEND_URL="http://localhost:8080/api/"
 
 RUN npm run build
 
